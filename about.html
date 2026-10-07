@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Sharath A B — Software Developer & MCA Graduate</title>
+  <meta name="description" content="Learn more about Sharath A B, an MCA graduate and software developer skilled in ASP.NET MVC, C#, SQL Server, Power BI, and modern web systems.">
+  
+  <link rel="icon" type="image/jpeg" href="assets/images/sharath-photo.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- NAVIGATION HEADER -->
+    <header class="header-nav">
+      <div class="nav-container">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" class="brand-avatar-mini">
+          <div class="brand-title">
+            <span class="brand-name">Sharath A B</span>
+            <span class="brand-role">&lt;About /&gt;</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+          <a href="about.html" class="nav-link active"><i class="fas fa-user"></i> About</a>
+          <a href="projects.html" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
+          <a href="education.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
+          <a href="certifications.html" class="nav-link"><i class="fas fa-award"></i> Certifications</a>
+          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="theme-picker">
+            <button class="theme-btn" id="themeToggleBtn" title="Change Color Palette">
+              <i class="fas fa-palette"></i>
+            </button>
+            <div class="theme-dropdown" id="themeDropdown">
+              <button class="theme-option" data-theme-set="default">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #6366f1, #06b6d4);"></span> Cyber Violet
+              </button>
+              <button class="theme-option" data-theme-set="emerald">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #10b981, #06b6d4);"></span> Emerald Tech
+              </button>
+              <button class="theme-option" data-theme-set="sunset">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #f43f5e, #f97316);"></span> Sunset Rose
+              </button>
+              <button class="theme-option" data-theme-set="sapphire">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #2563eb, #38bdf8);"></span> Sapphire Blue
+              </button>
+              <button class="theme-option" data-theme-set="light">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #ffffff, #4f46e5); border: 1px solid #ccc;"></span> Clean Light
+              </button>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-outline-cyan btn-sm" data-action="open-resume">
+            <i class="fas fa-eye"></i> <span>View Resume</span>
+          </a>
+          <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+            <i class="fas fa-download"></i> <span>Download CV</span>
+          </a>
+
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <aside class="mobile-nav-drawer" id="mobileDrawer">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--border-subtle);">
+        <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);">
+        <div>
+          <div style="font-weight:700; font-size:1.1rem;">Sharath A B</div>
+          <div style="font-size:0.8rem; color:var(--secondary);">MCA Graduate • .NET Dev</div>
+        </div>
+      </div>
+      <a href="index.html" class="nav-link"><i class="fas fa-home" style="width:24px;"></i> Home</a>
+      <a href="about.html" class="nav-link active"><i class="fas fa-user" style="width:24px;"></i> About</a>
+      <a href="projects.html" class="nav-link"><i class="fas fa-laptop-code" style="width:24px;"></i> Projects</a>
+      <a href="education.html" class="nav-link"><i class="fas fa-graduation-cap" style="width:24px;"></i> Education</a>
+      <a href="certifications.html" class="nav-link"><i class="fas fa-award" style="width:24px;"></i> Certifications</a>
+      <a href="contact.html" class="nav-link"><i class="fas fa-envelope" style="width:24px;"></i> Contact</a>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <a href="#" class="btn btn-outline-cyan btn-sm" data-action="open-resume">
+          <i class="fas fa-eye"></i> View Resume
+        </a>
+        <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <!-- ABOUT HERO / PROFILE OVERVIEW -->
+      <section class="section" style="padding-top: 30px;">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-badge"><i class="fas fa-id-card"></i> Personal Profile</div>
+            <h1 class="section-title">About <span class="gradient-text">Sharath A B</span></h1>
+            <p class="section-subtitle">
+              Passionate software developer dedicated to engineering scalable web applications, 
+              robust backend architectures, and impactful analytical data pipelines.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 40px; align-items: start;">
+            <!-- Left: Profile Photo Card & Personal Details -->
+            <div class="reveal">
+              <div class="glass-card" style="text-align: center; margin-bottom: 24px;">
+                <div style="width: 200px; height: 250px; margin: 0 auto 20px auto; border-radius: 20px; overflow: hidden; border: 2px solid var(--primary); box-shadow: 0 0 20px var(--primary-glow);">
+                  <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                <h3 style="font-size: 1.4rem; margin-bottom: 4px;">Sharath A B</h3>
+                <p style="color: var(--secondary); font-family: var(--font-mono); font-size: 0.85rem; margin-bottom: 16px;">
+                  MCA Graduate • .NET Developer
+                </p>
+                <div style="display: flex; justify-content: center; gap: 12px; margin-bottom: 20px;">
+                  <a href="mailto:sharathab74@gmail.com" class="btn btn-secondary btn-icon-only" title="Email Sharath">
+                    <i class="fas fa-envelope"></i>
+                  </a>
+                  <a href="tel:+919606640323" class="btn btn-secondary btn-icon-only" title="Call Sharath">
+                    <i class="fas fa-phone"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/sharath-a-b-243a53295" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-icon-only" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                  </a>
+                </div>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                  <button class="btn btn-outline-cyan btn-sm" data-action="open-resume">
+                    <i class="fas fa-file-pdf"></i> View Resume Online
+                  </button>
+                  <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+                    <i class="fas fa-download"></i> Download Official Resume
+                  </a>
+                </div>
+              </div>
+
+              <!-- Quick Personal Facts -->
+              <div class="glass-card">
+                <h4 style="font-size: 1.1rem; margin-bottom: 16px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 8px;">
+                  <i class="fas fa-user-check" style="color: var(--secondary);"></i> Personal Information
+                </h4>
+                <div style="display: flex; flex-direction: column; gap: 12px; font-size: 0.9rem;">
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">Date of Birth:</span>
+                    <span style="font-weight: 600;">08 / 09 / 2003</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">Nationality:</span>
+                    <span style="font-weight: 600;">Indian</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">Location:</span>
+                    <span style="font-weight: 600;">Bengaluru - 560097, India</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">Father's Name:</span>
+                    <span style="font-weight: 600;">Basavaraju A N</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">Languages:</span>
+                    <span style="font-weight: 600; color: var(--secondary-light);">English, Kannada, Hindi</span>
+                  </div>
+                  <div style="display: flex; justify-content: space-between;">
+                    <span style="color: var(--text-dim);">Hobbies:</span>
+                    <span style="font-weight: 600;">Travelling, Culinary Arts</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Detailed Narrative & Professional Story -->
+            <div class="reveal reveal-delay-2">
+              <div class="glass-card" style="margin-bottom: 28px;">
+                <h3 style="font-size: 1.5rem; margin-bottom: 16px;">
+                  <i class="fas fa-terminal" style="color: var(--primary-light); margin-right: 8px;"></i> Professional Summary
+                </h3>
+                <p style="color: var(--text-muted); line-height: 1.75; margin-bottom: 16px;">
+                  I am a detail-oriented <strong>Master of Computer Applications (MCA)</strong> post-graduate from 
+                  <strong>Presidency College, Bengaluru</strong>, graduating with a high academic score of <strong>8.9 / 10 CGPA</strong>. 
+                  My core technical specialization lies in <strong>software engineering, .NET development, ASP.NET MVC architecture, C#, SQL Server, and full-stack web applications</strong>.
+                </p>
+                <p style="color: var(--text-muted); line-height: 1.75; margin-bottom: 16px;">
+                  With hands-on experience in the <strong>Software Development Life Cycle (SDLC)</strong>, database schema normalization, 
+                  writing high-efficiency SQL queries, and systematic debugging, I enjoy converting multifaceted business requirements into responsive, 
+                  user-friendly digital solutions.
+                </p>
+                <p style="color: var(--text-muted); line-height: 1.75;">
+                  Beyond core backend and web engineering, I have developed analytical competencies in <strong>Data Visualization, Power BI, and Machine Learning with Python</strong>, 
+                  empowering me to bridge raw database records with meaningful organizational intelligence.
+                </p>
+              </div>
+
+              <!-- Professional Experience / Internship -->
+              <div class="glass-card" style="margin-bottom: 28px;">
+                <h3 style="font-size: 1.35rem; margin-bottom: 20px;">
+                  <i class="fas fa-briefcase" style="color: var(--secondary); margin-right: 8px;"></i> Industry Experience
+                </h3>
+                
+                <div style="padding: 18px; background: rgba(255, 255, 255, 0.03); border-radius: var(--radius-md); border-left: 4px solid var(--secondary);">
+                  <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; margin-bottom: 6px;">
+                    <h4 style="font-size: 1.15rem; color: var(--text-main);">Power BI Intern</h4>
+                    <span style="font-family: var(--font-mono); font-size: 0.82rem; background: rgba(6, 182, 212, 0.15); color: var(--secondary-light); padding: 4px 10px; border-radius: 6px;">
+                      Aug 2025 – Sep 2025
+                    </span>
+                  </div>
+                  <div style="font-size: 0.92rem; color: var(--secondary-light); font-weight: 600; margin-bottom: 12px;">
+                    Cognifyz Technologies
+                  </div>
+                  <ul style="color: var(--text-muted); font-size: 0.92rem; display: flex; flex-direction: column; gap: 8px; list-style: disc; padding-left: 20px;">
+                    <li>Engineered interactive business intelligence dashboards and cross-functional operational reporting modules.</li>
+                    <li>Transformed, cleaned, and modeled complex transactional datasets from heterogeneous sources utilizing DAX &amp; Power Query.</li>
+                    <li>Synthesized key performance indicators (KPIs) to furnish stakeholders with real-time actionable visual analytics.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Leadership & Extracurriculars -->
+              <div class="glass-card">
+                <h3 style="font-size: 1.35rem; margin-bottom: 18px;">
+                  <i class="fas fa-users-cog" style="color: #ec4899; margin-right: 8px;"></i> Leadership &amp; Community Responsibilities
+                </h3>
+                <div style="display: flex; flex-direction: column; gap: 14px;">
+                  <div style="display: flex; gap: 14px; align-items: flex-start;">
+                    <div style="width: 38px; height: 38px; border-radius: 8px; background: rgba(236, 72, 153, 0.15); display: flex; align-items: center; justify-content: center; color: #ec4899; flex-shrink: 0;">
+                      <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: var(--text-main);">Anti-Ragging Team Leader (BCA – 2 Years)</div>
+                      <div style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-top: 4px;">
+                        Elected to supervise collegiate anti-ragging measures at SSCASC Tumkur. Mentored incoming undergraduates, resolved peer disputes, and preserved an inclusive, secure academic atmosphere.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div style="display: flex; gap: 14px; align-items: flex-start;">
+                    <div style="width: 38px; height: 38px; border-radius: 8px; background: rgba(99, 102, 241, 0.15); display: flex; align-items: center; justify-content: center; color: var(--primary-light); flex-shrink: 0;">
+                      <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div>
+                      <div style="font-weight: 700; color: var(--text-main);">Collegiate Event Coordinator</div>
+                      <div style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-top: 4px;">
+                        Organized technical fests, symposiums, and cultural events. Coordinated scheduling, team volunteer management, technical setups, and executive guest hosts.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CODE PHILOSOPHY / HOW I WORK -->
+      <section class="section" style="background: rgba(255, 255, 255, 0.015); border-top: 1px solid var(--border-subtle);">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-badge"><i class="fas fa-lightbulb"></i> Philosophy</div>
+            <h2 class="section-title">My Engineering Approach</h2>
+            <p class="section-subtitle">
+              How I approach software design, problem decomposition, and delivery.
+            </p>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;" class="reveal">
+            <div class="glass-card">
+              <div style="font-size: 2rem; color: var(--primary-light); margin-bottom: 16px;">
+                <i class="fas fa-cubes"></i>
+              </div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Clean MVC Architecture</h3>
+              <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+                Strict separation of concerns between Model, View, and Controller layers ensures codebases remain modular, unit-testable, and straightforward to scale over time.
+              </p>
+            </div>
+
+            <div class="glass-card">
+              <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 16px;">
+                <i class="fas fa-database"></i>
+              </div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Efficient Data Modeling</h3>
+              <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+                Crafting normalized database relations, indexed tables, and optimized stored procedures to prevent query bottlenecks and guarantee ACID transaction consistency.
+              </p>
+            </div>
+
+            <div class="glass-card">
+              <div style="font-size: 2rem; color: #10b981; margin-bottom: 16px;">
+                <i class="fas fa-sync-alt"></i>
+              </div>
+              <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Iterative Agile Delivery</h3>
+              <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.6;">
+                Embracing Scrum rituals, systematic Git version control workflows, proactive troubleshooting, and continuous feature validation based on actual user needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FLOATING DOCK -->
+    <div class="quick-dock">
+      <a href="tel:+919606640323" class="dock-btn" title="Call Sharath">
+        <i class="fas fa-phone-alt"></i> <span>+91 9606640323</span>
+      </a>
+      <a href="#" data-copy="sharathab74@gmail.com" data-copy-label="Email copied!" class="dock-btn" title="Copy Email">
+        <i class="fas fa-copy"></i> <span>Copy Email</span>
+      </a>
+      <a href="#" class="dock-btn highlight" data-action="open-resume" title="View Resume">
+        <i class="fas fa-file-pdf"></i> <span>Resume</span>
+      </a>
+      <a href="https://www.linkedin.com/in/sharath-a-b-243a53295" target="_blank" rel="noopener noreferrer" class="dock-btn" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-logo">
+              <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" class="brand-avatar-mini">
+              <span class="brand-name">Sharath A B</span>
+            </div>
+            <p>
+              MCA Graduate &amp; Software Developer skilled in ASP.NET MVC, C#, SQL Server, Python, and Power BI.
+            </p>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Me</a>
+              <a href="projects.html">Projects</a>
+              <a href="education.html">Education</a>
+              <a href="certifications.html">Certifications</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Quick Actions</h4>
+            <div class="footer-links">
+              <a href="#" data-action="open-resume">View Resume (Modal)</a>
+              <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf">Download Resume (PDF)</a>
+              <a href="certifications.html">View Credentials</a>
+              <a href="#" data-copy="sharathab74@gmail.com">Copy Email Address</a>
+              <a href="tel:+919606640323">Direct Call</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Contact</h4>
+            <div class="footer-links">
+              <span style="color:var(--text-muted); font-size:0.9rem;"><i class="fas fa-map-marker-alt" style="color:var(--secondary);margin-right:8px;"></i> Bengaluru - 560097</span>
+              <a href="mailto:sharathab74@gmail.com"><i class="fas fa-envelope" style="color:var(--secondary);margin-right:8px;"></i> sharathab74@gmail.com</a>
+              <a href="tel:+919606640323"><i class="fas fa-phone" style="color:var(--secondary);margin-right:8px;"></i> +91 9606640323</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Sharath A B. All rights reserved.</div>
+          <a href="about.html" style="color:var(--text-muted);">Back to Top <i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- RESUME MODAL -->
+  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width: 960px; height: 90vh;">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <i class="fas fa-file-pdf" style="color:#ef4444;"></i> Sharath A B — Official Curriculum Vitae
+        </h3>
+        <button class="modal-close-btn" data-action="close-modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" style="padding: 10px; background: #1e293b;">
+        <div class="modal-iframe-container" style="height: 100%;">
+          <iframe id="resumePdfViewer" src="" title="Sharath Resume PDF"></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="assets/docs/sharath-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          <i class="fas fa-external-link-alt"></i> Open in New Tab
+        </a>
+        <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+          <i class="fas fa-download"></i> Download PDF
+        </a>
+        <button class="btn btn-secondary btn-sm" data-action="close-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

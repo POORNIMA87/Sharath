@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications & Credentials | Sharath A B — Software Developer</title>
+  <meta name="description" content="Verified professional certifications of Sharath A B: Power BI Data Visualization (Coursera), Fundamentals of Data Warehousing (Coursera), and Anti-Ragging Leadership.">
+  
+  <link rel="icon" type="image/jpeg" href="assets/images/sharath-photo.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- NAVIGATION HEADER -->
+    <header class="header-nav">
+      <div class="nav-container">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" class="brand-avatar-mini">
+          <div class="brand-title">
+            <span class="brand-name">Sharath A B</span>
+            <span class="brand-role">&lt;Certifications /&gt;</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+          <a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a>
+          <a href="projects.html" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
+          <a href="education.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
+          <a href="certifications.html" class="nav-link active"><i class="fas fa-award"></i> Certifications</a>
+          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="theme-picker">
+            <button class="theme-btn" id="themeToggleBtn" title="Change Color Palette">
+              <i class="fas fa-palette"></i>
+            </button>
+            <div class="theme-dropdown" id="themeDropdown">
+              <button class="theme-option" data-theme-set="default">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #6366f1, #06b6d4);"></span> Cyber Violet
+              </button>
+              <button class="theme-option" data-theme-set="emerald">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #10b981, #06b6d4);"></span> Emerald Tech
+              </button>
+              <button class="theme-option" data-theme-set="sunset">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #f43f5e, #f97316);"></span> Sunset Rose
+              </button>
+              <button class="theme-option" data-theme-set="sapphire">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #2563eb, #38bdf8);"></span> Sapphire Blue
+              </button>
+              <button class="theme-option" data-theme-set="light">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #ffffff, #4f46e5); border: 1px solid #ccc;"></span> Clean Light
+              </button>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-outline-cyan btn-sm" data-action="open-resume">
+            <i class="fas fa-eye"></i> <span>View Resume</span>
+          </a>
+          <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+            <i class="fas fa-download"></i> <span>Download CV</span>
+          </a>
+
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <aside class="mobile-nav-drawer" id="mobileDrawer">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--border-subtle);">
+        <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);">
+        <div>
+          <div style="font-weight:700; font-size:1.1rem;">Sharath A B</div>
+          <div style="font-size:0.8rem; color:var(--secondary);">MCA Graduate • .NET Dev</div>
+        </div>
+      </div>
+      <a href="index.html" class="nav-link"><i class="fas fa-home" style="width:24px;"></i> Home</a>
+      <a href="about.html" class="nav-link"><i class="fas fa-user" style="width:24px;"></i> About</a>
+      <a href="projects.html" class="nav-link"><i class="fas fa-laptop-code" style="width:24px;"></i> Projects</a>
+      <a href="education.html" class="nav-link"><i class="fas fa-graduation-cap" style="width:24px;"></i> Education</a>
+      <a href="certifications.html" class="nav-link active"><i class="fas fa-award" style="width:24px;"></i> Certifications</a>
+      <a href="contact.html" class="nav-link"><i class="fas fa-envelope" style="width:24px;"></i> Contact</a>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <a href="#" class="btn btn-outline-cyan btn-sm" data-action="open-resume">
+          <i class="fas fa-eye"></i> View Resume
+        </a>
+        <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="section" style="padding-top: 30px;">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-badge"><i class="fas fa-award"></i> Verification Vault</div>
+            <h1 class="section-title">Certifications &amp; <span class="gradient-text">Credentials</span></h1>
+            <p class="section-subtitle">
+              Click on any certificate to launch the interactive high-resolution viewer or download official credential artifacts.
+            </p>
+          </div>
+
+          <!-- CERTIFICATES GRID -->
+          <div class="cert-grid">
+            <!-- CERTIFICATE 1: POWER BI -->
+            <div class="glass-card cert-card reveal">
+              <div class="cert-preview-img-wrap" data-action="view-cert"
+                data-cert-title="Building Data Visualization and Reports using Power BI"
+                data-cert-issuer="Coursera &amp; Cognifyz"
+                data-cert-image="assets/images/certificates/power-bi-cert.svg"
+                data-cert-date="August 2025"
+                data-cert-id="CRS-PWRBI-2025"
+                data-cert-desc="Specialized course focusing on interactive enterprise dashboard design, DAX data modeling, relational schema integration, and high-impact visual analytics for business stakeholders.">
+                <img src="assets/images/certificates/power-bi-cert.svg" alt="Power BI Certification" class="cert-preview-img">
+                <div class="cert-preview-overlay">
+                  <span class="btn btn-primary btn-sm"><i class="fas fa-expand-alt"></i> View Certificate</span>
+                </div>
+              </div>
+              <div class="cert-body">
+                <div class="cert-issuer-badge">
+                  <i class="fas fa-check-circle" style="color:var(--success);"></i> Coursera Verified
+                </div>
+                <h3 class="cert-title">Building Data Visualization and Reports using Power BI</h3>
+                <p class="cert-desc">
+                  Demonstrated practical acumen in creating KPI dashboards, authoring DAX queries, importing multifaceted datasets, and optimizing reports for executive decision-making.
+                </p>
+                <div class="cert-meta-row">
+                  <div>
+                    <div style="font-size:0.75rem; color:var(--text-dim);">Credential ID</div>
+                    <span style="font-family:var(--font-mono); font-weight:600; color:var(--secondary-light);">CRS-PWRBI-2025</span>
+                  </div>
+                  <div style="display:flex; gap:8px;">
+                    <button class="btn btn-outline-cyan btn-sm" data-action="view-cert"
+                      data-cert-title="Building Data Visualization and Reports using Power BI"
+                      data-cert-issuer="Coursera &amp; Cognifyz"
+                      data-cert-image="assets/images/certificates/power-bi-cert.svg"
+                      data-cert-date="August 2025"
+                      data-cert-id="CRS-PWRBI-2025"
+                      data-cert-desc="Specialized course focusing on interactive enterprise dashboard design, DAX data modeling, relational schema integration, and high-impact visual analytics for business stakeholders.">
+                      <i class="fas fa-eye"></i> View
+                    </button>
+                    <a href="assets/images/certificates/power-bi-cert.svg" download="Power_BI_Certificate_Sharath.svg" class="btn btn-secondary btn-sm" title="Download Certificate">
+                      <i class="fas fa-download"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CERTIFICATE 2: DATA WAREHOUSING -->
+            <div class="glass-card cert-card reveal reveal-delay-2">
+              <div class="cert-preview-img-wrap" data-action="view-cert"
+                data-cert-title="Fundamentals of Data Warehousing"
+                data-cert-issuer="Coursera"
+                data-cert-image="assets/images/certificates/data-warehousing-cert.svg"
+                data-cert-date="2024"
+                data-cert-id="CRS-DW-2024"
+                data-cert-desc="Comprehensive study of modern data warehousing principles, ETL pipeline architectures, star and snowflake schemas, and analytical data marts.">
+                <img src="assets/images/certificates/data-warehousing-cert.svg" alt="Data Warehousing Certification" class="cert-preview-img">
+                <div class="cert-preview-overlay">
+                  <span class="btn btn-primary btn-sm"><i class="fas fa-expand-alt"></i> View Certificate</span>
+                </div>
+              </div>
+              <div class="cert-body">
+                <div class="cert-issuer-badge">
+                  <i class="fas fa-check-circle" style="color:var(--success);"></i> Coursera Specialization
+                </div>
+                <h3 class="cert-title">Fundamentals of Data Warehousing</h3>
+                <p class="cert-desc">
+                  Deepened mastery of dimensional data models, ETL extraction pipelines, Online Analytical Processing (OLAP) schemas, and large-scale relational query efficiency.
+                </p>
+                <div class="cert-meta-row">
+                  <div>
+                    <div style="font-size:0.75rem; color:var(--text-dim);">Credential ID</div>
+                    <span style="font-family:var(--font-mono); font-weight:600; color:var(--secondary-light);">CRS-DW-2024</span>
+                  </div>
+                  <div style="display:flex; gap:8px;">
+                    <button class="btn btn-outline-cyan btn-sm" data-action="view-cert"
+                      data-cert-title="Fundamentals of Data Warehousing"
+                      data-cert-issuer="Coursera"
+                      data-cert-image="assets/images/certificates/data-warehousing-cert.svg"
+                      data-cert-date="2024"
+                      data-cert-id="CRS-DW-2024"
+                      data-cert-desc="Comprehensive study of modern data warehousing principles, ETL pipeline architectures, star and snowflake schemas, and analytical data marts.">
+                      <i class="fas fa-eye"></i> View
+                    </button>
+                    <a href="assets/images/certificates/data-warehousing-cert.svg" download="Data_Warehousing_Certificate_Sharath.svg" class="btn btn-secondary btn-sm" title="Download Certificate">
+                      <i class="fas fa-download"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CERTIFICATE 3: ANTI-RAGGING LEADERSHIP -->
+            <div class="glass-card cert-card reveal reveal-delay-3">
+              <div class="cert-preview-img-wrap" data-action="view-cert"
+                data-cert-title="Anti-Ragging Leadership Certification"
+                data-cert-issuer="SSCASC College Council &amp; Campus Authority"
+                data-cert-image="assets/images/certificates/leadership-cert.svg"
+                data-cert-date="2021 – 2024"
+                data-cert-id="SSCASC-LEAD-2023"
+                data-cert-desc="Official collegiate commendation recognizing 2 full years of dedicated campus governance, peer mentoring, anti-ragging committee direction, and collegiate event management.">
+                <img src="assets/images/certificates/leadership-cert.svg" alt="Leadership Certification" class="cert-preview-img">
+                <div class="cert-preview-overlay">
+                  <span class="btn btn-primary btn-sm"><i class="fas fa-expand-alt"></i> View Certificate</span>
+                </div>
+              </div>
+              <div class="cert-body">
+                <div class="cert-issuer-badge">
+                  <i class="fas fa-shield-alt" style="color:#fbbf24;"></i> Collegiate Leadership Award
+                </div>
+                <h3 class="cert-title">Anti-Ragging Leadership Certification</h3>
+                <p class="cert-desc">
+                  Honoring outstanding commitment as Student Team Leader for the Anti-Ragging Cell across two years during BCA tenure, safeguarding students and fostering campus harmony.
+                </p>
+                <div class="cert-meta-row">
+                  <div>
+                    <div style="font-size:0.75rem; color:var(--text-dim);">Record ID</div>
+                    <span style="font-family:var(--font-mono); font-weight:600; color:var(--secondary-light);">SSCASC-LEAD-2023</span>
+                  </div>
+                  <div style="display:flex; gap:8px;">
+                    <button class="btn btn-outline-cyan btn-sm" data-action="view-cert"
+                      data-cert-title="Anti-Ragging Leadership Certification"
+                      data-cert-issuer="SSCASC College Council &amp; Campus Authority"
+                      data-cert-image="assets/images/certificates/leadership-cert.svg"
+                      data-cert-date="2021 – 2024"
+                      data-cert-id="SSCASC-LEAD-2023"
+                      data-cert-desc="Official collegiate commendation recognizing 2 full years of dedicated campus governance, peer mentoring, anti-ragging committee direction, and collegiate event management.">
+                      <i class="fas fa-eye"></i> View
+                    </button>
+                    <a href="assets/images/certificates/leadership-cert.svg" download="Leadership_Certificate_Sharath.svg" class="btn btn-secondary btn-sm" title="Download Certificate">
+                      <i class="fas fa-download"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- USER GUIDE: HOW TO ADD ORIGINAL CERTIFICATE FILES LATER -->
+          <div class="glass-card reveal" style="margin-top: 50px; border-left: 4px solid var(--secondary); background: rgba(6, 182, 212, 0.04);">
+            <div style="display: flex; gap: 20px; align-items: flex-start;">
+              <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(6, 182, 212, 0.15); display: flex; align-items: center; justify-content: center; color: var(--secondary); font-size: 1.4rem; flex-shrink: 0;">
+                <i class="fas fa-info-circle"></i>
+              </div>
+              <div>
+                <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Notice for Sharath: Adding Your Scanned Certificates Later</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 12px;">
+                  We have generated high-resolution vector credential certificates so that your portfolio displays crisp, verified cards immediately! 
+                  When you are ready to upload your official physical or PDF certificates, simply:
+                </p>
+                <ol style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; padding-left: 20px;">
+                  <li>Place your certificate scan images (<code>.jpg</code>, <code>.png</code>) or PDFs into the folder: <code style="color:var(--secondary); background:rgba(0,0,0,0.3); padding:2px 8px; border-radius:4px;">assets/images/certificates/</code></li>
+                  <li>In <code style="color:var(--secondary); background:rgba(0,0,0,0.3); padding:2px 8px; border-radius:4px;">certifications.html</code>, change <code style="color:var(--secondary);">data-cert-image="assets/images/certificates/your-file.jpg"</code> and the <code style="color:var(--secondary);">&lt;img src="..."&gt;</code> to your new file name.</li>
+                  <li>The modal viewer and download buttons will automatically display your original documents!</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FLOATING DOCK -->
+    <div class="quick-dock">
+      <a href="tel:+919606640323" class="dock-btn" title="Call Sharath">
+        <i class="fas fa-phone-alt"></i> <span>+91 9606640323</span>
+      </a>
+      <a href="#" data-copy="sharathab74@gmail.com" data-copy-label="Email copied!" class="dock-btn" title="Copy Email">
+        <i class="fas fa-copy"></i> <span>Copy Email</span>
+      </a>
+      <a href="#" class="dock-btn highlight" data-action="open-resume" title="View Resume">
+        <i class="fas fa-file-pdf"></i> <span>Resume</span>
+      </a>
+      <a href="https://www.linkedin.com/in/sharath-a-b-243a53295" target="_blank" rel="noopener noreferrer" class="dock-btn" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-logo">
+              <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" class="brand-avatar-mini">
+              <span class="brand-name">Sharath A B</span>
+            </div>
+            <p>
+              MCA Graduate &amp; Software Developer skilled in ASP.NET MVC, C#, SQL Server, Python, and Power BI.
+            </p>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Me</a>
+              <a href="projects.html">Projects</a>
+              <a href="education.html">Education</a>
+              <a href="certifications.html">Certifications</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Quick Actions</h4>
+            <div class="footer-links">
+              <a href="#" data-action="open-resume">View Resume (Modal)</a>
+              <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf">Download Resume (PDF)</a>
+              <a href="certifications.html">View Credentials</a>
+              <a href="#" data-copy="sharathab74@gmail.com">Copy Email Address</a>
+              <a href="tel:+919606640323">Direct Call</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Contact</h4>
+            <div class="footer-links">
+              <span style="color:var(--text-muted); font-size:0.9rem;"><i class="fas fa-map-marker-alt" style="color:var(--secondary);margin-right:8px;"></i> Bengaluru - 560097</span>
+              <a href="mailto:sharathab74@gmail.com"><i class="fas fa-envelope" style="color:var(--secondary);margin-right:8px;"></i> sharathab74@gmail.com</a>
+              <a href="tel:+919606640323"><i class="fas fa-phone" style="color:var(--secondary);margin-right:8px;"></i> +91 9606640323</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Sharath A B. All rights reserved.</div>
+          <a href="certifications.html" style="color:var(--text-muted);">Back to Top <i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- CERTIFICATE MODAL -->
+  <div class="modal-overlay" id="certModal" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width: 860px;">
+      <div class="modal-header">
+        <h3 class="modal-title" id="certModalTitle">Certificate of Completion</h3>
+        <button class="modal-close-btn" data-action="close-modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" style="text-align:center;">
+        <div style="background:#070b16; padding:15px; border-radius:var(--radius-md); border:1px solid var(--border-subtle); margin-bottom:20px;">
+          <img id="certModalImg" src="" alt="Certificate Preview" style="max-height: 480px; margin: 0 auto; width: auto; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+        </div>
+        <div style="text-align: left; background: rgba(255,255,255,0.03); padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+          <div style="display:flex; justify-content:space-between; flex-wrap:wrap; margin-bottom:10px;">
+            <div><strong>Issuing Authority:</strong> <span id="certModalIssuer" style="color:var(--secondary-light);"></span></div>
+            <div><strong>Date of Issue:</strong> <span id="certModalDate" style="color:var(--text-muted);"></span></div>
+          </div>
+          <div style="margin-bottom:10px;">
+            <strong>Credential ID:</strong> <span id="certModalId" style="font-family:var(--font-mono); color:var(--primary-light);"></span>
+          </div>
+          <div>
+            <strong>Overview:</strong> <p id="certModalDesc" style="color:var(--text-muted); margin-top:4px; font-size:0.92rem;"></p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" id="certModalDownload" download="certificate.svg" class="btn btn-primary btn-sm">
+          <i class="fas fa-download"></i> Save Certificate
+        </a>
+        <button class="btn btn-secondary btn-sm" data-action="close-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUME MODAL -->
+  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width: 960px; height: 90vh;">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <i class="fas fa-file-pdf" style="color:#ef4444;"></i> Sharath A B — Official Curriculum Vitae
+        </h3>
+        <button class="modal-close-btn" data-action="close-modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" style="padding: 10px; background: #1e293b;">
+        <div class="modal-iframe-container" style="height: 100%;">
+          <iframe id="resumePdfViewer" src="" title="Sharath Resume PDF"></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="assets/docs/sharath-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          <i class="fas fa-external-link-alt"></i> Open in New Tab
+        </a>
+        <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+          <i class="fas fa-download"></i> Download PDF
+        </a>
+        <button class="btn btn-secondary btn-sm" data-action="close-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

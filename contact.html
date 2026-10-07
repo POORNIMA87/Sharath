@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &amp; Connect | Sharath A B — Software Developer</title>
+  <meta name="description" content="Get in touch with Sharath A B for software development and engineering opportunities in Bengaluru. Direct email, phone, and LinkedIn.">
+  
+  <link rel="icon" type="image/jpeg" href="assets/images/sharath-photo.jpeg">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/animations.css">
+  <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+<body>
+  <div class="ambient-glow ambient-glow-1"></div>
+  <div class="ambient-glow ambient-glow-2"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="page-wrapper">
+    <!-- NAVIGATION HEADER -->
+    <header class="header-nav">
+      <div class="nav-container">
+        <a href="index.html" class="brand-logo">
+          <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" class="brand-avatar-mini">
+          <div class="brand-title">
+            <span class="brand-name">Sharath A B</span>
+            <span class="brand-role">&lt;Contact /&gt;</span>
+          </div>
+        </a>
+
+        <nav class="nav-links">
+          <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+          <a href="about.html" class="nav-link"><i class="fas fa-user"></i> About</a>
+          <a href="projects.html" class="nav-link"><i class="fas fa-laptop-code"></i> Projects</a>
+          <a href="education.html" class="nav-link"><i class="fas fa-graduation-cap"></i> Education</a>
+          <a href="certifications.html" class="nav-link"><i class="fas fa-award"></i> Certifications</a>
+          <a href="contact.html" class="nav-link active"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="theme-picker">
+            <button class="theme-btn" id="themeToggleBtn" title="Change Color Palette">
+              <i class="fas fa-palette"></i>
+            </button>
+            <div class="theme-dropdown" id="themeDropdown">
+              <button class="theme-option" data-theme-set="default">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #6366f1, #06b6d4);"></span> Cyber Violet
+              </button>
+              <button class="theme-option" data-theme-set="emerald">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #10b981, #06b6d4);"></span> Emerald Tech
+              </button>
+              <button class="theme-option" data-theme-set="sunset">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #f43f5e, #f97316);"></span> Sunset Rose
+              </button>
+              <button class="theme-option" data-theme-set="sapphire">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #2563eb, #38bdf8);"></span> Sapphire Blue
+              </button>
+              <button class="theme-option" data-theme-set="light">
+                <span class="theme-color-dot" style="background: linear-gradient(135deg, #ffffff, #4f46e5); border: 1px solid #ccc;"></span> Clean Light
+              </button>
+            </div>
+          </div>
+
+          <a href="#" class="btn btn-outline-cyan btn-sm" data-action="open-resume">
+            <i class="fas fa-eye"></i> <span>View Resume</span>
+          </a>
+          <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+            <i class="fas fa-download"></i> <span>Download CV</span>
+          </a>
+
+          <button class="hamburger-btn" id="hamburgerBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <aside class="mobile-nav-drawer" id="mobileDrawer">
+      <div style="display:flex; align-items:center; gap:12px; margin-bottom:20px; padding-bottom:16px; border-bottom:1px solid var(--border-subtle);">
+        <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--primary);">
+        <div>
+          <div style="font-weight:700; font-size:1.1rem;">Sharath A B</div>
+          <div style="font-size:0.8rem; color:var(--secondary);">MCA Graduate • .NET Dev</div>
+        </div>
+      </div>
+      <a href="index.html" class="nav-link"><i class="fas fa-home" style="width:24px;"></i> Home</a>
+      <a href="about.html" class="nav-link"><i class="fas fa-user" style="width:24px;"></i> About</a>
+      <a href="projects.html" class="nav-link"><i class="fas fa-laptop-code" style="width:24px;"></i> Projects</a>
+      <a href="education.html" class="nav-link"><i class="fas fa-graduation-cap" style="width:24px;"></i> Education</a>
+      <a href="certifications.html" class="nav-link"><i class="fas fa-award" style="width:24px;"></i> Certifications</a>
+      <a href="contact.html" class="nav-link active"><i class="fas fa-envelope" style="width:24px;"></i> Contact</a>
+      <div style="margin-top:auto; display:flex; flex-direction:column; gap:10px;">
+        <a href="#" class="btn btn-outline-cyan btn-sm" data-action="open-resume">
+          <i class="fas fa-eye"></i> View Resume
+        </a>
+        <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+          <i class="fas fa-download"></i> Download CV
+        </a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="section" style="padding-top: 30px;">
+        <div class="container">
+          <div class="section-header reveal">
+            <div class="section-badge"><i class="fas fa-headset"></i> Get In Touch</div>
+            <h1 class="section-title">Let's <span class="gradient-text">Connect</span></h1>
+            <p class="section-subtitle">
+              Whether you are looking to hire a software engineer, discuss a collaboration, or inquire about my technical experience, my inbox is always open.
+            </p>
+          </div>
+
+          <div class="contact-layout">
+            <!-- Left: Direct Contact Information Cards -->
+            <div class="reveal">
+              <div class="glass-card" style="height: 100%;">
+                <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Contact Information</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+                  Reach out directly via phone, email, or LinkedIn. I typically respond within 24 hours.
+                </p>
+
+                <div class="contact-info-list">
+                  <!-- Email Card -->
+                  <div class="contact-card-item">
+                    <div class="contact-icon-box">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div style="flex: 1;">
+                      <div class="contact-text-label">Email Address</div>
+                      <div class="contact-text-value">sharathab74@gmail.com</div>
+                      <div style="display: flex; gap: 10px; margin-top: 8px;">
+                        <a href="mailto:sharathab74@gmail.com" class="btn btn-primary btn-sm" style="padding: 4px 12px; font-size: 0.8rem;">
+                          <i class="fas fa-paper-plane"></i> Write Mail
+                        </a>
+                        <button class="btn btn-secondary btn-sm" style="padding: 4px 12px; font-size: 0.8rem;" data-copy="sharathab74@gmail.com" data-copy-label="Email address copied!">
+                          <i class="fas fa-copy"></i> Copy
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Phone Card -->
+                  <div class="contact-card-item">
+                    <div class="contact-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #10b981;">
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div style="flex: 1;">
+                      <div class="contact-text-label">Phone &amp; Mobile</div>
+                      <div class="contact-text-value">+91 9606640323</div>
+                      <div style="display: flex; gap: 10px; margin-top: 8px;">
+                        <a href="tel:+919606640323" class="btn btn-outline-cyan btn-sm" style="padding: 4px 12px; font-size: 0.8rem;">
+                          <i class="fas fa-phone"></i> Call Now
+                        </a>
+                        <a href="https://wa.me/919606640323?text=Hi%20Sharath,%20I%20reviewed%20your%20software%20portfolio%20and%20would%20like%20to%20connect." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="padding: 4px 12px; font-size: 0.8rem; color:#25d366;">
+                          <i class="fab fa-whatsapp"></i> WhatsApp
+                        </a>
+                        <button class="btn btn-secondary btn-sm" style="padding: 4px 12px; font-size: 0.8rem;" data-copy="+919606640323" data-copy-label="Phone number copied!">
+                          <i class="fas fa-copy"></i> Copy
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Location Card -->
+                  <div class="contact-card-item">
+                    <div class="contact-icon-box" style="background: rgba(244, 63, 94, 0.15); color: #f43f5e;">
+                      <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div>
+                      <div class="contact-text-label">Location Base</div>
+                      <div class="contact-text-value">Bengaluru - 560097, Karnataka, India</div>
+                      <p style="font-size: 0.82rem; color: var(--text-dim); margin-top: 4px;">
+                        Open for in-person roles in Bengaluru, hybrid, and remote opportunities across India and globally.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Professional Networks -->
+                  <div class="contact-card-item">
+                    <div class="contact-icon-box" style="background: rgba(14, 165, 233, 0.15); color: #0ea5e9;">
+                      <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <div style="flex:1;">
+                      <div class="contact-text-label">LinkedIn Profile</div>
+                      <div class="contact-text-value">sharath-a-b-243a53295</div>
+                      <a href="https://www.linkedin.com/in/sharath-a-b-243a53295" target="_blank" rel="noopener noreferrer" class="btn btn-outline-cyan btn-sm" style="display:inline-flex; margin-top: 8px; padding: 4px 12px; font-size: 0.8rem;">
+                        <i class="fas fa-external-link-alt"></i> Open LinkedIn
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Message Dispatch Form -->
+            <div class="reveal reveal-delay-2">
+              <div class="glass-card">
+                <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Send a Direct Message</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+                  Fill out this form to launch an instant message pre-addressed to <strong>sharathab74@gmail.com</strong>.
+                </p>
+
+                <form id="contactForm">
+                  <div class="form-group">
+                    <label for="senderName" class="form-label">Your Name <span style="color:var(--accent);">*</span></label>
+                    <input type="text" id="senderName" class="form-control" placeholder="e.g. Priya Sharma" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="senderEmail" class="form-label">Your Email Address <span style="color:var(--accent);">*</span></label>
+                    <input type="email" id="senderEmail" class="form-control" placeholder="name@company.com" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="senderSubject" class="form-label">Subject</label>
+                    <input type="text" id="senderSubject" class="form-control" placeholder="Opportunity: Software Developer (.NET / Full Stack)">
+                  </div>
+
+                  <div class="form-group">
+                    <label for="senderMessage" class="form-label">Message Details <span style="color:var(--accent);">*</span></label>
+                    <textarea id="senderMessage" class="form-control" placeholder="Hi Sharath, I'm reaching out regarding..." required></textarea>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-paper-plane"></i> Send Message Now
+                  </button>
+                </form>
+
+                <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--border-subtle); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;">
+                  <span style="font-size: 0.85rem; color: var(--text-dim);">
+                    <i class="fas fa-shield-alt" style="color:var(--success);"></i> Direct &amp; Confidential
+                  </span>
+                  <button class="btn btn-secondary btn-sm" data-action="open-resume">
+                    <i class="fas fa-file-pdf"></i> Quick View Resume
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FLOATING DOCK -->
+    <div class="quick-dock">
+      <a href="tel:+919606640323" class="dock-btn" title="Call Sharath">
+        <i class="fas fa-phone-alt"></i> <span>+91 9606640323</span>
+      </a>
+      <a href="#" data-copy="sharathab74@gmail.com" data-copy-label="Email copied!" class="dock-btn" title="Copy Email">
+        <i class="fas fa-copy"></i> <span>Copy Email</span>
+      </a>
+      <a href="#" class="dock-btn highlight" data-action="open-resume" title="View Resume">
+        <i class="fas fa-file-pdf"></i> <span>Resume</span>
+      </a>
+      <a href="https://www.linkedin.com/in/sharath-a-b-243a53295" target="_blank" rel="noopener noreferrer" class="dock-btn" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="brand-logo">
+              <img src="assets/images/sharath-photo.jpeg" alt="Sharath A B" class="brand-avatar-mini">
+              <span class="brand-name">Sharath A B</span>
+            </div>
+            <p>
+              MCA Graduate &amp; Software Developer skilled in ASP.NET MVC, C#, SQL Server, Python, and Power BI.
+            </p>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Navigation</h4>
+            <div class="footer-links">
+              <a href="index.html">Home</a>
+              <a href="about.html">About Me</a>
+              <a href="projects.html">Projects</a>
+              <a href="education.html">Education</a>
+              <a href="certifications.html">Certifications</a>
+              <a href="contact.html">Contact</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Quick Actions</h4>
+            <div class="footer-links">
+              <a href="#" data-action="open-resume">View Resume (Modal)</a>
+              <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf">Download Resume (PDF)</a>
+              <a href="certifications.html">View Credentials</a>
+              <a href="#" data-copy="sharathab74@gmail.com">Copy Email Address</a>
+              <a href="tel:+919606640323">Direct Call</a>
+            </div>
+          </div>
+          <div>
+            <h4 class="footer-col-title">Contact</h4>
+            <div class="footer-links">
+              <span style="color:var(--text-muted); font-size:0.9rem;"><i class="fas fa-map-marker-alt" style="color:var(--secondary);margin-right:8px;"></i> Bengaluru - 560097</span>
+              <a href="mailto:sharathab74@gmail.com"><i class="fas fa-envelope" style="color:var(--secondary);margin-right:8px;"></i> sharathab74@gmail.com</a>
+              <a href="tel:+919606640323"><i class="fas fa-phone" style="color:var(--secondary);margin-right:8px;"></i> +91 9606640323</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div>&copy; 2026 Sharath A B. All rights reserved.</div>
+          <a href="contact.html" style="color:var(--text-muted);">Back to Top <i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- RESUME MODAL -->
+  <div class="modal-overlay" id="resumeModal" role="dialog" aria-modal="true">
+    <div class="modal-window" style="max-width: 960px; height: 90vh;">
+      <div class="modal-header">
+        <h3 class="modal-title">
+          <i class="fas fa-file-pdf" style="color:#ef4444;"></i> Sharath A B — Official Curriculum Vitae
+        </h3>
+        <button class="modal-close-btn" data-action="close-modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="modal-body" style="padding: 10px; background: #1e293b;">
+        <div class="modal-iframe-container" style="height: 100%;">
+          <iframe id="resumePdfViewer" src="" title="Sharath Resume PDF"></iframe>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="assets/docs/sharath-resume.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+          <i class="fas fa-external-link-alt"></i> Open in New Tab
+        </a>
+        <a href="assets/docs/sharath-resume.pdf" download="SHARATH_AB_RESUME.pdf" class="btn btn-primary btn-sm">
+          <i class="fas fa-download"></i> Download PDF
+        </a>
+        <button class="btn btn-secondary btn-sm" data-action="close-modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/modal.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
